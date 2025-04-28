@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/Logo TokoKU.jpg" type="image/x-icon">
+    <title>tokoku.com</title>
+    <!-- Memuat Bootstrap dari CDN -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigasi -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="img/Logo TokoKU.jpg" class="rounded-circle brand-logo me-2" alt="Logo TokoKU">
+                <span>TokoKU</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+                </ul>
+                <form class="d-flex ms-3">
+                    <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Search">
+                    <button class="btn btn-light" type="submit">Cari</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section position-relative">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative h-100 d-flex align-items-center">
+            <div class="text-center text-white mx-auto py-5">
+                <h1 class="display-3 fw-bold mb-4">Selamat Datang di TokoKU</h1>
+                <p class="lead fs-4 mb-4">Temukan berbagai produk berkualitas dengan harga terbaik</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#" class="btn btn-primary btn-lg px-4">Mulai Belanja</a>
+                    <a href="#" class="btn btn-outline-light btn-lg px-4">Pelajari Lebih Lanjut</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Konten -->
+    <div class="container py-5">
+        <!-- Kategori Populer -->
+        <h2 class="text-center mb-4">Kategori Populer</h2>
+        <div class="row justify-content-center mb-5 g-4">
+            <div class="col-md-4">
+                <div class="card text-center category-card hover-shadow">
+                    <div class="card-body">
+                        <i class="fas fa-mobile-alt fa-3x mb-3 text-primary"></i>
+                        <h5 class="card-title">Gadget</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center category-card hover-shadow">
+                    <div class="card-body">
+                        <i class="fas fa-tshirt fa-3x mb-3 text-primary"></i>
+                        <h5 class="card-title">Hiburan</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center category-card hover-shadow">
+                    <div class="card-body">
+                        <i class="fas fa-home fa-3x mb-3 text-primary"></i>
+                        <h5 class="card-title">Elektronik</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Produk Unggulan -->
+        <h2 class="text-center mb-4">Produk Unggulan</h2>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <div class="badge bg-danger position-absolute top-0 end-0 m-2">-20%</div>
+                    <img src="img/iphones-7479304_1280.jpg" class="card-img-top" alt="Smartphone">
+                    <div class="card-body">
+                        <h5 class="card-title">Smartphone XYZ</h5>
+                        <p class="card-text text-muted">128GB, 8GB RAM, 5G</p>
+                        <p class="card-text">
+                            <span class="text-decoration-line-through text-muted">Rp 5.000.000</span>
+                            <span class="fs-5 fw-bold text-primary">Rp 4.000.000</span>
+                        </p>
+                        <button class="btn btn-primary w-100">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/headphone.jpg" class="card-img-top" alt="Headphone">
+                    <div class="card-body">
+                        <h5 class="card-title">Headphone ABC</h5>
+                        <p class="card-text text-muted">Wireless, Noise Cancelling</p>
+                        <p class="card-text">
+                            <span class="fs-5 fw-bold text-primary">Rp 1.500.000</span>
+                        </p>
+                        <button class="btn btn-primary w-100">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <div class="badge bg-success position-absolute top-0 end-0 m-2">Baru</div>
+                    <img src="https://cdn.pixabay.com/photo/2020/02/10/09/18/calendar-4835848_1280.jpg" class="card-img-top" alt="Smartwatch">
+                    <div class="card-body">
+                        <h5 class="card-title">Smartwatch Pro</h5>
+                        <p class="card-text text-muted">Water Resistant, HR Monitor</p>
+                        <p class="card-text">
+                            <span class="fs-5 fw-bold text-primary">Rp 2.800.000</span>
+                        </p>
+                        <button class="btn btn-primary w-100">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/ipad.webp" class="card-img-top" alt="Tablet">
+                    <div class="card-body">
+                        <h5 class="card-title">Tablet Pro</h5>
+                        <p class="card-text text-muted">10 inch, 256GB Storage</p>
+                        <p class="card-text">
+                            <span class="fs-5 fw-bold text-primary">Rp 6.500.000</span>
+                        </p>
+                        <button class="btn btn-primary w-100">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Bootstrap Website | by B imskuycrop</p>
+    </footer>
+
+    <!-- Memuat Bootstrap JavaScript -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
