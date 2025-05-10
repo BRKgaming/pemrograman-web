@@ -49,6 +49,12 @@ body {
     object-fit: cover;
 }
 
+
+.d-flex a {
+    text-decoration: none;
+}
+
 footer {
     margin-top: 3rem;
+    
 }

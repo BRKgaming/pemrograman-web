@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=deviwidth, initial-scale=1">
     <link rel="icon" href="img/Logo TokoKU.jpg" type="image/x-icon">
     <title>tokoku.com</title>
     <!-- Memuat Bootstrap dari CDN -->
@@ -25,15 +25,46 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Tentang</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="tentang.html">Tentang</a></li>
+                    
+
                 </ul>
-                <form class="d-flex ms-3">
-                    <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Search">
-                    <button class="btn btn-light" type="submit">Cari</button>
-                </form>
             </div>
+            <form class="d-flex ms-3 me-3">
+                <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Search">
+                <button class="btn btn-light" type="submit">Cari</button>
+            </form>
+            <!-- Tombol Keranjang -->
+            <a href="keranjang.html" id="link-keranjang">
+                <div class="position-relative d-inline-block">
+                  <img src="img/ikon-keranjang.jpg" class="img-fluid" alt="Keranjang" width="40" height="40">
+                  <span id="jumlah-keranjang" class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                </div>
+              </a>
+              
+            </div>
+            </a>
+            <!-- Tombol profil -->
+            <div class="dropdown ms-3">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="img/user.png" alt="Profile" width="30" height="30" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                  <li><a class="dropdown-item" href="#">Profil Saya</a></li>
+                  <li><a class="dropdown-item" href="#">Pengaturan</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Keluar</a></li>
+                </ul>
+              </div>
+        </div>
+
+
+
+        </div>
         </div>
     </nav>
 
@@ -56,32 +87,36 @@
     <div class="container py-5">
         <!-- Kategori Populer -->
         <h2 class="text-center mb-4">Kategori Populer</h2>
-        <div class="row justify-content-center mb-5 g-4">
-            <div class="col-md-4">
-                <div class="card text-center category-card hover-shadow">
-                    <div class="card-body">
-                        <i class="fas fa-mobile-alt fa-3x mb-3 text-primary"></i>
-                        <h5 class="card-title">Gadget</h5>
+        <div class="d-flex">
+            <a href="Gadget.html" class="col-4">
+                <div class="card text-center category-card hover-shadow me-3">
+                    <div class="card-body ">
+                        <i class="fas fa-tshirt fa-3x mb-3 text-primary"></i>
+                        <h5 class="card-title mb-0">Gadget</h5>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center category-card hover-shadow">
+            </a>
+
+
+            <a href="Gaming.html" class="col-4">
+                <div class="card text-center category-card hover-shadow me-3">
                     <div class="card-body">
                         <i class="fas fa-tshirt fa-3x mb-3 text-primary"></i>
-                        <h5 class="card-title">Hiburan</h5>
+                        <h5 class="card-title mb-0">Gaming</h5>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center category-card hover-shadow">
+            </a>
+
+            <a href="Elektronik.html" class="col-4">
+                <div class="card text-center category-card hover-shadow me-3">
                     <div class="card-body">
                         <i class="fas fa-home fa-3x mb-3 text-primary"></i>
-                        <h5 class="card-title">Elektronik</h5>
+                        <h5 class="card-title mb-0">Elektronik</h5>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
+    </div>
 
         <!-- Produk Unggulan -->
         <h2 class="text-center mb-4">Produk Unggulan</h2>
@@ -97,7 +132,14 @@
                             <span class="text-decoration-line-through text-muted">Rp 5.000.000</span>
                             <span class="fs-5 fw-bold text-primary">Rp 4.000.000</span>
                         </p>
-                        <button class="btn btn-primary w-100">Tambah ke Keranjang</button>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-primary flex-fill tambah-keranjang"
+                              data-id="1" data-nama="Smartphone XYZ"
+                              data-harga="4000000" data-gambar="img/iphones-7479304_1280.jpg"
+                              data-variasi="128GB, 8GB RAM">Tambah ke Keranjang</button>
+                            <a href="checkout.html" class="btn btn-success flex-fill">Checkout</a>
+                          </div>
+                          
                     </div>
                 </div>
             </div>
@@ -110,14 +152,21 @@
                         <p class="card-text">
                             <span class="fs-5 fw-bold text-primary">Rp 1.500.000</span>
                         </p>
-                        <button class="btn btn-primary w-100">Tambah ke Keranjang</button>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-primary flex-fill tambah-keranjang"
+                              data-id="2" data-nama="Headphone ABC"
+                              data-harga="1500000" data-gambar="img/headphone.jpg"
+                                data-variasi="Wireless, Noise Cancelling">Tambah ke Keranjang</button>
+                            <a href="checkout.html" class="btn btn-success flex-fill">Checkout</a>
+                          </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 mb-4">
                 <div class="card h-100">
                     <div class="badge bg-success position-absolute top-0 end-0 m-2">Baru</div>
-                    <img src="https://cdn.pixabay.com/photo/2020/02/10/09/18/calendar-4835848_1280.jpg" class="card-img-top" alt="Smartwatch">
+                    <img src="https://cdn.pixabay.com/photo/2020/02/10/09/18/calendar-4835848_1280.jpg"
+                        class="card-img-top" alt="Smartwatch">
                     <div class="card-body">
                         <h5 class="card-title">Smartwatch Pro</h5>
                         <p class="card-text text-muted">Water Resistant, HR Monitor</p>
@@ -144,13 +193,127 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Bootstrap Website | by B imskuycrop</p>
-    </footer>
+    <script>
+        document.querySelectorAll(".tambah-keranjang").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const item = {
+                    id: btn.dataset.id,
+                    nama: btn.dataset.nama,
+                    harga: parseInt(btn.dataset.harga),
+                    gambar: btn.dataset.gambar,
+                    variasi: btn.dataset.variasi,
+                    jumlah: 1
+                };
+    
+                let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+    
+                const index = keranjang.findIndex(i => i.id === item.id);
+                if (index >= 0) {
+                    keranjang[index].jumlah += 1;
+                } else {
+                    keranjang.push(item);
+                }
+    
+                localStorage.setItem("keranjang", JSON.stringify(keranjang));
+                updateJumlahKeranjang();
+                alert("Produk ditambahkan ke keranjang!");
+            });
+        });
+    
+        // Fungsi untuk memperbarui jumlah item di ikon keranjang
+        function updateJumlahKeranjang() {
+            const keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+            const total = keranjang.reduce((acc, item) => acc + item.jumlah, 0);
+            const jumlahKeranjangEl = document.getElementById("jumlah-keranjang");
+            if (jumlahKeranjangEl) {
+                jumlahKeranjangEl.textContent = total;
+            }
+        }
+    
+        // Panggil fungsi saat halaman dimuat
+        document.addEventListener("DOMContentLoaded", updateJumlahKeranjang);
+    </script>
+    
 
-    <!-- Memuat Bootstrap JavaScript -->
-    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+<!-- Footer -->
+<footer class="bg-light  pt-5 pb-4">
+    <div class="container">
+      <div class="row text-start">
+  
+        <!-- Layanan Pelanggan -->
+        <div class="col-6 col-md-2 mb-3">
+          <h6 class="fw-bold">produk</h6>
+          <ul class="list-unstyled">
+            <li><a href="Gadget.html">Gadget</a></li>
+            <li><a href="Elektronik.html">Elektronik</a></li>
+          </ul>
+        </div>
+  
+       
+  
+        <!-- Pembayaran dan Pengiriman -->
+        <div class="col-12 col-md-4 mb-3">
+          <h6 class="fw-bold">Pembayaran</h6>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <img src="img/logo Bri.jpg" width="50">
+            <img src="img/logo dana.webp" width="50">
+            <img src="img/logo gopay.webp" width="50">
+            <img src="img/logo ovo.webp" width="50">
+            <img src="img/Logo bca.webp" width="50">
+            <img src="img/logo mandiri.webp" width="50">
+            
+            
+          </div>
+          <h6 class="fw-bold mt-3">Pengiriman</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <img src="img/jnt-logo.webp" width="50">
+            
+          </div>
+        </div>
+  
+        <!-- Ikuti Kami & Keamanan -->
+        <div class="col-6 col-md-2 mb-3">
+          <h6 class="fw-bold">Ikuti Kami</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+        
+          </ul>
+        </div>
+  
+        <!-- Download -->
+        <div class="col-6 col-md-2 mb-3">
+          <h6 class="fw-bold">Download Aplikasi TokoKU</h6>
+          
+      </div>
+  
+      
+      
+      
+        <div class="text-center mt-2 d-flex justify-content-center align-items-center gap-2">
+            <img src="img/Screenshot 2025-05-10 204209.png" alt="Lokasi" width="400" height="200">
+            <span>Lokasi:</span>
+            <a href="https://www.google.com/maps/search/Jl.+Awikoen+MadyJalan+Awikoen+Madya+Timur+1+No+18+Rt+01%2F02,+rumah+Koskosan+Paling+Pojok+Pager+Abu+Abu,+KAB.+GRESIK,+KEBOMAS,+JAWA+TIMUR,+ID,+61123a+Jaya/@-7.1708485,112.630574,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D" 
+               class="text-decoration-none">
+              Jl. Awikoen Madya Timur 1 No 18, Kos Pojok
+              Gresik, Jawa Timur, 61123
+            </a>
+          </div>
+          <hr>
+
+          <div class="text-center small " left=30px;>
+        
+            © tokoKU 2025. Hak cipta Team tokoKU
+        </div>
+          
+  </footer>
+  
+
+<!-- Memuat Bootstrap JavaScript -->
+<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
