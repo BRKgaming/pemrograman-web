@@ -1,0 +1,11 @@
+{
+    "name": "JobVacancy",
+    "alias": "jobvacancy",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\JobVacancy\\Providers\\JobVacancyServiceProvider"
+    ],
+    "files": []
+}

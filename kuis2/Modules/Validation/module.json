@@ -1,0 +1,11 @@
+{
+    "name": "Validation",
+    "alias": "validation",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Validation\\Providers\\ValidationServiceProvider"
+    ],
+    "files": []
+}
