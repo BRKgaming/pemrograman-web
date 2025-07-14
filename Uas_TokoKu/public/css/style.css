@@ -1,0 +1,85 @@
+body {
+    padding-top: 76px;
+}
+
+.brand-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.hero-section {
+    background-image: url('../img/Screenshot 2025-05-10 204209.png');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
+    z-index: 2;
+}
+
+.card {
+    transition: transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.category-card i {
+    color: #0d6efd;
+    margin-bottom: 1rem;
+}
+
+.product-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.d-flex a {
+    text-decoration: none;
+}
+
+footer {
+    margin-top: 3rem;
+}
+
+/* Additional Laravel-specific styles */
+.hover-shadow {
+    transition: all 0.3s ease;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.breadcrumb {
+    background: none;
+    padding: 0;
+}
+
+.cart-item {
+    transition: all 0.3s ease;
+}
+
+.cart-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}

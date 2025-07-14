@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=deviwidth, initial-scale=1">
+    <link rel="icon" href="img/Logo TokoKU.jpg" type="image/x-icon">
+    <title>tokoku.com</title>
+    <!-- Memuat Bootstrap dari CDN -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigasi -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="img/Logo TokoKU.jpg" class="rounded-circle brand-logo me-2" alt="Logo TokoKU">
+                <span>TokoKU</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="tentang.html">Tentang</a></li>
+                    
+
+                </ul>
+            </div>
+            <form class="d-flex ms-3 me-3">
+                <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Search">
+                <button class="btn btn-light" type="submit">Cari</button>
+            </form>
+            <!-- Tombol Keranjang -->
+            <a href="keranjang.html" id="link-keranjang">
+                <div class="position-relative d-inline-block">
+                  <img src="img/ikon-keranjang.jpg" class="img-fluid" alt="Keranjang" width="40" height="40">
+                  <span id="jumlah-keranjang" class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                </div>
+              </a>
+              
+            </div>
+            </a>
+            <!-- Tombol profil -->
+            <div class="dropdown ms-3">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="img/user.png" alt="Profile" width="30" height="30" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                  <li><a class="dropdown-item" href="#">Profil Saya</a></li>
+                  <li><a class="dropdown-item" href="#">Pengaturan</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Keluar</a></li>
+                </ul>
+              </div>
+        </div>
+
+
+
+        
+    </nav>
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="img/laptop.jpg" class="card-img-top" alt="Laptop">
+                <div class="card-body">
+                    <h5 class="card-title">Laptop UltraBook Z</h5>
+                    <p class="card-text text-muted">14", i7, 16GB RAM, SSD 512GB</p>
+                    <p class="card-text">
+                        <span class="fs-5 fw-bold text-primary">Rp 12.000.000</span>
+                    </p>
+                    <button class="btn btn-primary w-100">Tambah ke Keranjang</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <div class="badge bg-danger position-absolute top-0 end-0 m-2">-10%</div>
+                <img src="img/tws.jpg" class="card-img-top" alt="TWS Earbuds">
+                <div class="card-body">
+                    <h5 class="card-title">TWS Earbuds Gen2</h5>
+                    <p class="card-text text-muted">Bluetooth 5.3, 30H Battery</p>
+                    <p class="card-text">
+                        <span class="text-decoration-line-through text-muted">Rp 500.000</span>
+                        <span class="fs-5 fw-bold text-primary">Rp 450.000</span>
+                    </p>
+                    <button class="btn btn-primary w-100">Tambah ke Keranjang</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="img/gaming-mouse.jpg" class="card-img-top" alt="Gaming Mouse">
+                <div class="card-body">
+                    <h5 class="card-title">Gaming Mouse RGB</h5>
+                    <p class="card-text text-muted">7200 DPI, RGB Lighting</p>
+                    <p class="card-text">
+                        <span class="fs-5 fw-bold text-primary">Rp 300.000</span>
+                    </p>
+                    <button class="btn btn-primary w-100">Tambah ke Keranjang</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <div class="badge bg-success position-absolute top-0 end-0 m-2">Baru</div>
+                <img src="img/powerbank.jpg" class="card-img-top" alt="Power Bank">
+                <div class="card-body">
+                    <h5 class="card-title">Power Bank FastCharge 20000mAh</h5>
+                    <p class="card-text text-muted">PD 20W, Dual Output</p>
+                    <p class="card-text">
+                        <span class="fs-5 fw-bold text-primary">Rp 350.000</span>
+                    </p>
+                    <button class="btn btn-primary w-100">Tambah ke Keranjang</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Produk 1 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/laptop.jpg" class="card-img-top" alt="Laptop">
+                    <div class="card-body">
+                        <h5 class="card-title">Laptop UltraBook Z</h5>
+                        <p class="card-text text-muted">14", i7, 16GB RAM, SSD 512GB</p>
+                        <p class="card-text">
+                            <span class="fs-5 fw-bold text-primary">Rp 12.000.000</span>
+                        </p>
+                        <button class="btn btn-primary w-100">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Produk 2 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <div class="badge bg-danger position-absolute top-0 end-0 m-2">-10%</div>
+                    <img src="img/tws.jpg" class="card-img-top" alt="TWS Earbuds">
+                    <div class="card-body">
+                        <h5 class="card-title">TWS Earbuds Gen2</h5>
+                        <p class="card-text text-muted">Bluetooth 5.3, 30H Battery</p>
+                        <p class="card-text">
+                            <span class="text-decoration-line-through text-muted">Rp 500.000</span>
+                            <span class="fs-5 fw-bold text-primary">Rp 450.000</span>
+                        </p>
+                        <button class="btn btn-primary w-100">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Produk 3 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/gaming-mouse.jpg" class="card-img-top" alt="Gaming Mouse">
+                    <div class="card-body">
+                        <h5 class="card-title">Gaming Mouse RGB</h5>
+                        <p class="card-text text-muted">7200 DPI, RGB Lighting</p>
+                        <p class="card-text">
+                            <span class="fs-5 fw-bold text-primary">Rp 300.000</span>
+                        </p>
+                        <button class="btn btn-primary w-100">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Produk 4 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <div class="badge bg-success position-absolute top-0 end-0 m-2">Baru</div>
+                    <img src="img/powerbank.jpg" class="card-img-top" alt="Power Bank">
+                    <div class="card-body">
+                        <h5 class="card-title">Power Bank FastCharge 20000mAh</h5>
+                        <p class="card-text text-muted">PD 20W, Dual Output</p>
+                        <p class="card-text">
+                            <span class="fs-5 fw-bold text-primary">Rp 350.000</span>
+                        </p>
+                        <button class="btn btn-primary w-100">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Produk 5 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/smart-tv.jpg" class="card-img-top" alt="Smart TV">
+                    <div class="card-body">
+                        <h5 class="card-title">Smart TV 43" 4K UHD</h5>
+                        <p class="card-text text-muted">WiFi, Android TV, Dolby Audio</p>
+                        <p class="card-text">
+                            <span class="fs-5 fw-bold text-primary">Rp 4.500.000</span>
+                        </p>
+                        <button class="btn btn-primary w-100">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Produk 6 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/cctv-camera.jpg" class="card-img-top" alt="CCTV">
+                    <div class="card-body">
+                        <h5 class="card-title">CCTV Kamera 360°</h5>
+                        <p class="card-text text-muted">HD, Night Vision, Motion Detection</p>
+                        <p class="card-text">
+                            <span class="fs-5 fw-bold text-primary">Rp 800.000</span>
+                        </p>
+                        <button class="btn btn-primary w-100">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Produk 7 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="img/bluetooth-speaker.jpg" class="card-img-top" alt="Bluetooth Speaker">
+                    <div class="card-body">
+                        <h5 class="card-title">Bluetooth Speaker Bass+ Pro</h5>
+                        <p class="card-text text-muted">20W Output, Waterproof</p>
+                        <p class="card-text">
+                            <span class="fs-5 fw-bold text-primary">Rp 650.000</span>
+                        </p>
+                        <button class="btn btn-primary w-100">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Produk 8 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <div class="badge bg-danger position-absolute top-0 end-0 m-2">-15%</div>
+                    <img src="img/router.jpg" class="card-img-top" alt="WiFi Router">
+                    <div class="card-body">
+                        <h5 class="card-title">WiFi Router Dual Band</h5>
+                        <p class="card-text text-muted">2.4GHz & 5GHz, 1200Mbps</p>
+                        <p class="card-text">
+                            <span class="text-decoration-line-through text-muted">Rp 700.000</span>
+                            <span class="fs-5 fw-bold text-primary">Rp 595.000</span>
+                        </p>
+                        <button class="btn btn-primary w-100">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- Footer -->
+<footer class="bg-light  pt-5 pb-4">
+    <div class="container">
+      <div class="row text-start">
+  
+        <!-- Layanan Pelanggan -->
+        <div class="col-6 col-md-2 mb-3">
+          <h6 class="fw-bold">produk</h6>
+          <ul class="list-unstyled">
+            <li><a href="Gadget.html">Gadget</a></li>
+            <li><a href="Elektronik.html">Elektronik</a></li>
+          </ul>
+        </div>
+  
+       
+  
+        <!-- Pembayaran dan Pengiriman -->
+        <div class="col-12 col-md-4 mb-3">
+          <h6 class="fw-bold">Pembayaran</h6>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <img src="img/logo Bri.jpg" width="50">
+            <img src="img/logo dana.webp" width="50">
+            <img src="img/logo gopay.webp" width="50">
+            <img src="img/logo ovo.webp" width="50">
+            <img src="img/Logo bca.webp" width="50">
+            <img src="img/logo mandiri.webp" width="50">
+            
+            
+          </div>
+          <h6 class="fw-bold mt-3">Pengiriman</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <img src="img/jnt-logo.webp" width="50">
+            
+          </div>
+        </div>
+  
+        <!-- Ikuti Kami & Keamanan -->
+        <div class="col-6 col-md-2 mb-3">
+          <h6 class="fw-bold">Ikuti Kami</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+        
+          </ul>
+        </div>
+  
+        <!-- Download -->
+        <div class="col-6 col-md-2 mb-3">
+          <h6 class="fw-bold">Download Aplikasi TokoKU</h6>
+          
+      </div>
+  
+      
+      
+      
+        <div class="text-center mt-2 d-flex justify-content-center align-items-center gap-2">
+            <img src="img/Screenshot 2025-05-10 204209.png" alt="Lokasi" width="400" height="200">
+            <span>Lokasi:</span>
+            <a href="https://www.google.com/maps/search/Jl.+Awikoen+MadyJalan+Awikoen+Madya+Timur+1+No+18+Rt+01%2F02,+rumah+Koskosan+Paling+Pojok+Pager+Abu+Abu,+KAB.+GRESIK,+KEBOMAS,+JAWA+TIMUR,+ID,+61123a+Jaya/@-7.1708485,112.630574,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D" 
+               class="text-decoration-none">
+              Jl. Awikoen Madya Timur 1 No 18, Kos Pojok
+              Gresik, Jawa Timur, 61123
+            </a>
+          </div>
+          <hr>
+
+          <div class="text-center small " left=30px;>
+        
+            © tokoKU 2025. Hak cipta Team tokoKU
+        </div>
+          
+  </footer>
+  <!-- Memuat Bootstrap JavaScript -->
+<script src="js/bootstrap.bundle.min.js"></script>
+    
+    
+</body>
+</html>

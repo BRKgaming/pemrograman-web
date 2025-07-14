@@ -1,0 +1,67 @@
+/* Modal fix for Bootstrap 5 */
+.modal {
+    padding-right: 0 !important;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040 !important;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.5 !important;
+}
+
+/* Prevent body shift when modal opens */
+body.modal-open {
+    overflow: hidden;
+    padding-right: 0 !important;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+/* Force modals to be visible */
+.modal.show {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+/* Smoother animation */
+.modal.fade .modal-dialog {
+    transition: transform 0.2s ease-out !important;
+    transform: translate(0, -50px) !important;
+}
+
+.modal.show .modal-dialog {
+    transform: none !important;
+}
+
+/* Enhance status badges */
+.status-badge {
+    transition: all 0.2s ease;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 0.35rem 0.65rem;
+}
+
+/* Style untuk detail pesanan */
+.order-detail-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 1rem;
+    margin: -1rem -1rem 1rem -1rem;
+    border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.order-status-badge {
+    display: inline-block;
+    min-width: 90px;
+    text-align: center;
+}
+
+.order-items-table th {
+    background-color: #f8f9fa;
+}
