@@ -20,7 +20,13 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'avatar',
         'password',
+        'role',
+        'address',
+        'phone',
+        'city',
+        'postal_code',
     ];
 
     /**
@@ -44,5 +50,45 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Check if user is admin
+     */
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
+
+    /**
+     * Check if user is regular user
+     */
+    public function isUser(): bool
+    {
+        return $this->role === 'user';
+    }
+
+    /**
+     * Get user's orders
+     */
+    public function orders()
+    {
+        return $this->hasMany(\App\Models\Order::class);
+    }
+
+    /**
+     * Get user's inventory transactions
+     */
+    public function inventoryTransactions()
+    {
+        return $this->hasMany(\App\Models\InventoryTransaction::class);
+    }
+    
+    /**
+     * Get user's wishlist items
+     */
+    public function wishlists()
+    {
+        return $this->hasMany(\App\Models\Wishlist::class);
     }
 }

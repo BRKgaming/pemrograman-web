@@ -1,0 +1,154 @@
+/* Modal Anti-flicker CSS 
+ * Solusi untuk mengatasi masalah kedipan pada modal Bootstrap
+ */
+
+/* ===== PERBAIKAN MODAL UMUM ===== */
+
+/* Optimasi untuk semua modal */
+.modal {
+    will-change: opacity;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    opacity: 1 !important;
+}
+
+/* Menghapus transformasi default modal dialog yang menyebabkan flicker */
+.modal.fade .modal-dialog {
+    transform: none !important;
+    -webkit-transform: none !important;
+    transition: none !important;
+    margin: 1.75rem auto !important; /* Posisi tetap */
+}
+
+/* Optimasi backdrop */
+.modal-backdrop {
+    will-change: opacity;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    opacity: 0.5 !important;
+}
+
+/* Hardware acceleration untuk konten modal */
+.modal-content {
+    will-change: opacity;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Mengatasi masalah body scroll */
+body.modal-open {
+    overflow: hidden;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* ===== SOLUSI KHUSUS UNTUK MODAL NO-FLICKER ===== */
+
+/* Modal khusus tanpa flicker */
+.no-flicker-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1055;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+    will-change: opacity;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: none !important;
+}
+
+/* Dialog tanpa transform */
+.no-flicker-modal .modal-dialog {
+    transform: none !important;
+    -webkit-transform: none !important;
+    transition: none !important;
+    margin: 1.75rem auto !important;
+}
+
+/* Konten tanpa flicker */
+.no-flicker {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: opacity;
+    transition: none !important;
+}
+
+/* ===== KELAS UTILITY ===== */
+
+/* Menerapkan hardware acceleration */
+.hw-accelerated {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: opacity, transform;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* Menonaktifkan transisi */
+.no-transition {
+    transition: none !important;
+}
+
+/* Menonaktifkan transform */
+.no-transform {
+    transform: none !important;
+    -webkit-transform: none !important;
+}
+
+/* ===== PRELOAD GAMBAR ===== */
+
+/* Optimasi rendering gambar */
+.preloaded-img {
+    image-rendering: -webkit-optimize-contrast;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+/* ===== ANIMASI & EFEK VISUAL ===== */
+
+/* Efek fade in halus untuk konten */
+@keyframes smoothFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Animasi untuk tombol hapus */
+.btn-delete-animation {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-delete-animation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.5s;
+}
+
+.btn-delete-animation.animate::before {
+    left: 100%;
+}

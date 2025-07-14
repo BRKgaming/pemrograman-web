@@ -1,0 +1,181 @@
+/* Modal Backdrop CSS for fullscreen appearance */
+.modal-backdrop-fs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    will-change: opacity;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Styled modal dialog with improved visuals */
+.fullscreen-modal {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 1050 !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.fullscreen-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.fullscreen-modal .modal-dialog {
+    margin: 0 !important;
+    max-width: 85% !important;
+    width: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transform: none !important;
+    opacity: 0;
+    transform: scale(0.9) !important;
+    transition: transform 0.3s ease, opacity 0.3s ease !important;
+}
+
+.fullscreen-modal.show .modal-dialog {
+    opacity: 1;
+    transform: scale(1) !important;
+}
+
+.fullscreen-modal .modal-content {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border: none;
+    max-width: 500px;
+    width: 100%;
+}
+
+.fullscreen-modal .modal-header {
+    border-bottom: 1px solid #dee2e6;
+    padding: 1.25rem;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.fullscreen-modal .modal-body {
+    padding: 1.5rem;
+}
+
+.fullscreen-modal .modal-footer {
+    border-top: 1px solid #dee2e6;
+    padding: 1.25rem;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+/* Delete confirmation specific styling */
+.fullscreen-modal#deleteModal .modal-content {
+    overflow: hidden;
+}
+
+.fullscreen-modal#deleteModal .modal-header.bg-danger {
+    background: linear-gradient(135deg, #ff4b4b 0%, #ff2b2b 100%) !important;
+}
+
+.fullscreen-modal#deleteModal .btn-danger {
+    background: linear-gradient(135deg, #ff4b4b 0%, #ff2b2b 100%);
+    border: none;
+    box-shadow: 0 4px 8px rgba(255, 75, 75, 0.3);
+    transition: all 0.3s ease;
+}
+
+.fullscreen-modal#deleteModal .btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 75, 75, 0.4);
+}
+
+/* Delete confirmation button animation */
+.delete-confirm-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.delete-confirm-btn:hover {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff4b4b 100%) !important;
+    box-shadow: 0 5px 15px rgba(255, 75, 75, 0.4);
+    transform: translateY(-2px);
+}
+
+.delete-confirm-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.5s;
+}
+
+.delete-confirm-btn.animate::before {
+    left: 100%;
+}
+
+/* Shake animation for delete button */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.delete-confirm-btn:hover {
+    animation: shake 0.8s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translateX(0);
+}
+
+/* Ensure images don't flicker */
+.fullscreen-modal img {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* Animation for product image */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.fullscreen-modal#deleteModal img.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .fullscreen-modal .modal-dialog {
+        max-width: 95% !important;
+    }
+    
+    .fullscreen-modal .modal-content {
+        max-width: 100%;
+    }
+}

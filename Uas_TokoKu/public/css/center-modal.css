@@ -1,0 +1,80 @@
+/* Center Modal CSS */
+.modal.center-modal {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.center-modal .modal-dialog {
+    margin: 0;
+    max-width: 85%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0, 0) !important;
+}
+
+.modal.fullscreen-modal {
+    padding: 0 !important;
+    overflow-y: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal.fullscreen-modal .modal-dialog {
+    max-width: 90%;
+    height: 90vh;
+    margin: 5vh auto;
+    display: flex;
+    align-items: center;
+    pointer-events: all;
+}
+
+.modal.fullscreen-modal .modal-content {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    pointer-events: all;
+}
+
+.modal-backdrop.hw-accelerated {
+    background-color: transparent !important;
+}
+
+/* Animation for centered modal */
+.modal.fade.center-modal .modal-dialog {
+    transform: scale(0.8) !important;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease !important;
+}
+
+.modal.fade.center-modal.show .modal-dialog {
+    transform: scale(1) !important;
+    opacity: 1;
+}
+
+/* Make sure cursor behavior is consistent over modal elements */
+.modal-content * {
+    cursor: default;
+}
+
+.modal-content button, 
+.modal-content a,
+.modal-content .btn {
+    cursor: pointer;
+}
+
+/* Ensure modal takes proper z-index */
+.modal.center-modal {
+    z-index: 1050 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .modal.fullscreen-modal .modal-dialog {
+        max-width: 95%;
+        height: auto;
+        margin: 2.5vh auto;
+    }
+}

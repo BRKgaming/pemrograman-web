@@ -1,13 +1,136 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Web Application - Tugas 3
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Deskripsi Proyek
 
-## About Laravel
+Aplikasi web Laravel dengan fitur lengkap yang mencakup sistem autentikasi, dashboard, dan operasi CRUD. Aplikasi ini dibangun menggunakan Laravel 12 dengan desain yang responsif dan modern.
+
+## Fitur Utama
+
+### ✅ Authentication System
+- **Login**: Halaman login dengan validasi email dan password
+- **Register**: Halaman registrasi dengan validasi client-side dan server-side
+- **Logout**: Sistem logout yang aman
+- **Session Management**: Pengelolaan session yang secure
+
+### ✅ Dashboard
+- **Protected Route**: Dashboard hanya dapat diakses setelah login
+- **User Statistics**: Menampilkan statistik pengguna
+- **Welcome Message**: Pesan selamat datang yang personal
+- **Quick Actions**: Aksi cepat untuk navigasi
+- **Activity Timeline**: Riwayat aktivitas pengguna
+
+### ✅ CRUD Operations
+- **Create**: Membuat data baru
+- **Read**: Menampilkan data
+- **Update**: Mengubah data existing
+- **Delete**: Menghapus data
+
+### ✅ Database Integration
+- **MySQL/SQLite**: Penyimpanan data menggunakan database
+- **Migrations**: Struktur database yang terorganisir
+- **Seeders**: Data dummy untuk testing
+
+### ✅ Input Validation
+- **Client-side**: Validasi JavaScript real-time
+- **Server-side**: Validasi Laravel yang robust
+- **Error Handling**: Penanganan error yang user-friendly
+
+### ✅ Responsive Design
+- **Mobile-first**: Desain yang mengutamakan mobile
+- **Bootstrap 5**: Framework CSS yang modern
+- **Cross-browser**: Kompatibel dengan berbagai browser
+
+## Instalasi dan Penggunaan
+
+### Prerequisites
+- PHP 8.2 atau lebih tinggi
+- Composer
+
+### Langkah Instalasi
+
+1. **Install Dependencies**
+   ```bash
+   composer install
+   ```
+
+2. **Environment Setup**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+
+3. **Database Setup**
+   ```bash
+   # Untuk SQLite (default)
+   touch database/database.sqlite
+   ```
+
+4. **Run Migrations dan Seeders**
+   ```bash
+   php artisan migrate
+   php artisan db:seed
+   ```
+
+5. **Start Development Server**
+   ```bash
+   php artisan serve
+   ```
+
+### Default Login Credentials
+- **Admin**: admin@example.com / password123
+- **User**: john@example.com / password123
+
+## Struktur Routes
+
+### Public Routes
+- `GET /` - Halaman utama
+- `GET /login` - Halaman login
+- `POST /login` - Proses login
+- `GET /register` - Halaman registrasi
+- `POST /register` - Proses registrasi
+
+### Protected Routes (Memerlukan Authentication)
+- `GET /dashboard` - Dashboard pengguna
+- `POST /logout` - Logout
+
+## Teknologi yang Digunakan
+
+### Backend
+- **Laravel 12.x**: PHP Framework
+- **PHP 8.2+**: Programming Language
+- **SQLite**: Database (default)
+- **Eloquent ORM**: Database management
+
+### Frontend
+- **HTML5**: Markup language
+- **CSS3**: Styling dengan custom CSS
+- **JavaScript**: Client-side interactivity
+- **Bootstrap 5**: CSS Framework
+- **Font Awesome**: Icon library
+
+### Authentication
+- **Laravel Built-in Auth**: Session-based authentication
+- **Password Hashing**: Bcrypt untuk keamanan
+- **CSRF Protection**: Token-based protection
+
+## Fitur Keamanan
+
+### Authentication
+- ✅ CSRF Protection
+- ✅ Password Hashing (Bcrypt)
+- ✅ Session Management
+- ✅ Remember Me functionality
+- ✅ Input Sanitization
+
+### Validation
+- ✅ Server-side validation
+- ✅ Client-side validation
+- ✅ XSS Protection
+- ✅ SQL Injection Protection
+
+---
+
+## About Laravel (Original Content)
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
@@ -35,19 +158,14 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
+- **[Vehikl](https://vehikl.com)**
 - **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
 - **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
 - **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
 - **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
+- **[Redberry](https://redberry.international/laravel-development)**
 - **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
 ## Contributing
 

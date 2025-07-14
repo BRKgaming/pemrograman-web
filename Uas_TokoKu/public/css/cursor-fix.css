@@ -1,0 +1,135 @@
+/* Cursor Fix CSS - Solusi untuk mengatasi masalah kedipan kursor dan flicker pada modal */
+
+/* Stabilkan dokumen */
+html, body {
+    scroll-behavior: smooth;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tetapkan kursor dengan tepat */
+* {
+    cursor: default;
+}
+
+/* Elemen yang harus menggunakan pointer */
+a, button, input[type="button"], input[type="submit"], input[type="reset"], 
+.btn, .clickable, [role="button"], .nav-link, .navbar-brand,
+select, option, .dropdown-item, .card-link, .page-link {
+    cursor: pointer !important;
+}
+
+/* Elemen yang harus menggunakan kursor teks */
+input[type="text"], input[type="number"], input[type="email"], 
+input[type="password"], input[type="search"], input[type="url"],
+input[type="tel"], textarea, .form-control:not(select) {
+    cursor: text !important;
+}
+
+/* Khusus untuk select */
+select, select.form-control, select.form-select {
+    cursor: pointer !important;
+}
+
+/* Mencegah seleksi teks yang tidak diinginkan */
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Aktifkan akselerasi hardware untuk menghindari kedipan */
+.hw-accelerated {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+}
+
+/* Fix khusus untuk modal */
+.modal {
+    will-change: opacity;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+.modal-backdrop {
+    will-change: opacity;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+.modal-content {
+    will-change: transform;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.modal.fade .modal-dialog {
+    transform: translate(0, 0) !important;
+    -webkit-transform: translate(0, 0) !important;
+}
+
+/* Mencegah efek kedipan saat elemen aktif */
+button:active, .btn:active, a:active {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+/* Perbaikan khusus untuk kedipan pada hover */
+a:hover, button:hover, .btn:hover {
+    transition: all 0.2s ease;
+}
+
+/* Memperbaiki transisi fokus */
+*:focus {
+    transition: outline 0.2s ease;
+}
+
+/* Mengoptimalkan rendering teks */
+body {
+    text-rendering: optimizeLegibility;
+}
+
+/* Fix untuk iOS */
+@supports (-webkit-touch-callout: none) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+/* Fix untuk Firefox */
+@-moz-document url-prefix() {
+    * {
+        scrollbar-width: thin;
+    }
+}
+
+/* Perbaikan khusus untuk Bootstrap Modal */
+.modal-open {
+    overflow: hidden;
+    padding-right: 0 !important;
+}
+
+/* Animasi modal yang lebih halus */
+.modal.fade {
+    transition: opacity 0.2s linear !important;
+}
+
+/* Hindari kedipan dengan meniadakan animasi transform pada modal dialog */
+.modal.fade .modal-dialog {
+    transition: none !important;
+}
+
+/* Fix untuk notifikasi yang mungkin flicker */
+.alert {
+    will-change: opacity, transform;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
