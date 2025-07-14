@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 700px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border: 2px solid black;
+}
+
+.time {
+    font-size: 48px;
+    font-family: Arial, sans-serif;
+}
+
+.seconds {
+    color: green;
+}
+
+.milliseconds {
+    color: red;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.start { background-color: green; color: white; }
+.stop { background-color: yellow; }
+.reset { background-color: red; color: white; }
+.start:hover { background-color: darkgreen; }
+.stop:hover { background-color: gold; }
+.reset:hover { background-color: darkred; }
